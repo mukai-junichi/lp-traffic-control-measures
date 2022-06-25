@@ -12148,28 +12148,13 @@ header.masthead {
   }
 }
 
-.price {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
-
-  .row {
-    justify-content: center;
-
-    .price-info {
-      height: 7rem;
-
-      p {
-        font-size: 16px;
-      }
-    }
-  }
-}
-
 @media (min-width: 768px) {
   .showcase .showcase-text {
     padding: 7rem;
   }
 }
+
+
 
 .testimonials {
   padding-top: 7rem;
