@@ -155,7 +155,6 @@ p {
 
 abbr {
   &[title], &[data-bs-original-title] {
-    -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted;
     cursor: help;
     -webkit-text-decoration-skip-ink: none;
@@ -2121,8 +2120,6 @@ progress {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2157,27 +2154,9 @@ progress {
     opacity: 1;
   }
 
-  &::-webkit-file-upload-button {
+  &::-webkit-file-upload-button, &::file-selector-button {
     padding: 0.75rem 1rem;
     margin: -0.75rem -1rem;
-    -webkit-margin-end: 1rem;
-    margin-inline-end: 1rem;
-    color: #212529;
-    background-color: #e9ecef;
-    pointer-events: none;
-    border-color: inherit;
-    border-style: solid;
-    border-width: 0;
-    border-inline-end-width: 1px;
-    border-radius: 0;
-    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
-
-  &::file-selector-button {
-    padding: 0.75rem 1rem;
-    margin: -0.75rem -1rem;
-    -webkit-margin-end: 1rem;
     margin-inline-end: 1rem;
     color: #212529;
     background-color: #e9ecef;
@@ -2199,7 +2178,6 @@ progress {
   &::-webkit-file-upload-button {
     padding: 0.75rem 1rem;
     margin: -0.75rem -1rem;
-    -webkit-margin-end: 1rem;
     margin-inline-end: 1rem;
     color: #212529;
     background-color: #e9ecef;
@@ -2209,7 +2187,6 @@ progress {
     border-width: 0;
     border-inline-end-width: 1px;
     border-radius: 0;
-    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
 
@@ -2226,12 +2203,7 @@ progress {
 
 @media (prefers-reduced-motion: reduce) {
   .form-control {
-    &::-webkit-file-upload-button {
-      -webkit-transition: none;
-      transition: none;
-    }
-
-    &::file-selector-button {
+    &::-webkit-file-upload-button, &::file-selector-button {
       transition: none;
     }
   }
@@ -2239,7 +2211,6 @@ progress {
 
 @media (prefers-reduced-motion: reduce) {
   .form-control::-webkit-file-upload-button {
-    -webkit-transition: none;
     transition: none;
   }
 }
@@ -2270,7 +2241,6 @@ progress {
   &::-webkit-file-upload-button, &::file-selector-button, &::-webkit-file-upload-button {
     padding: 0.5rem 0.75rem;
     margin: -0.5rem -0.75rem;
-    -webkit-margin-end: 0.75rem;
     margin-inline-end: 0.75rem;
   }
 }
@@ -2284,7 +2254,6 @@ progress {
   &::-webkit-file-upload-button, &::file-selector-button, &::-webkit-file-upload-button {
     padding: 1rem 1.25rem;
     margin: -1rem -1.25rem;
-    -webkit-margin-end: 1.25rem;
     margin-inline-end: 1.25rem;
   }
 }
@@ -2335,8 +2304,6 @@ textarea {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 
   &:focus {
@@ -2404,8 +2371,6 @@ textarea {
   background-position: center;
   background-size: contain;
   border: 1px solid rgba(0, 0, 0, 0.25);
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 
   &[type=checkbox] {
@@ -2506,8 +2471,6 @@ textarea {
   height: 1.5rem;
   padding: 0;
   background-color: transparent;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 
   &:focus {
@@ -2529,9 +2492,7 @@ textarea {
     background-color: #0d6efd;
     border: 0;
     border-radius: 1rem;
-    -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    -webkit-appearance: none;
     appearance: none;
 
     &:active {
@@ -2555,9 +2516,7 @@ textarea {
     background-color: #0d6efd;
     border: 0;
     border-radius: 1rem;
-    -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    -moz-appearance: none;
     appearance: none;
 
     &:active {
@@ -2586,14 +2545,12 @@ textarea {
 
 @media (prefers-reduced-motion: reduce) {
   .form-range::-webkit-slider-thumb {
-    -webkit-transition: none;
     transition: none;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .form-range::-moz-range-thumb {
-    -moz-transition: none;
     transition: none;
   }
 }
@@ -2969,9 +2926,6 @@ textarea {
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
@@ -5682,12 +5636,6 @@ fieldset:disabled .btn {
   }
 }
 
-@-webkit-keyframes progress-bar-stripes {
-  0% {
-    background-position-x: 1rem;
-  }
-}
-
 @keyframes progress-bar-stripes {
   0% {
     background-position-x: 1rem;
@@ -5727,13 +5675,11 @@ fieldset:disabled .btn {
 }
 
 .progress-bar-animated {
-  -webkit-animation: 1s linear infinite progress-bar-stripes;
   animation: 1s linear infinite progress-bar-stripes;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .progress-bar-animated {
-    -webkit-animation: none;
     animation: none;
   }
 }
@@ -6187,9 +6133,6 @@ fieldset:disabled .btn {
 
   &:disabled, &.disabled {
     pointer-events: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     opacity: 0.25;
   }
@@ -6220,8 +6163,6 @@ fieldset:disabled .btn {
 }
 
 .toast-container {
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   max-width: 100%;
   pointer-events: none;
@@ -6857,7 +6798,6 @@ fieldset:disabled .btn {
   float: left;
   width: 100%;
   margin-right: -100%;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transition: transform 0.6s ease-in-out;
 
@@ -7067,12 +7007,6 @@ fieldset:disabled .btn {
   }
 }
 
-@-webkit-keyframes spinner-border {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes spinner-border {
   to {
     transform: rotate(360deg);
@@ -7087,7 +7021,6 @@ fieldset:disabled .btn {
   border: 0.25em solid currentColor;
   border-right-color: transparent;
   border-radius: 50%;
-  -webkit-animation: 0.75s linear infinite spinner-border;
   animation: 0.75s linear infinite spinner-border;
 }
 
@@ -7095,17 +7028,6 @@ fieldset:disabled .btn {
   width: 1rem;
   height: 1rem;
   border-width: 0.2em;
-}
-
-@-webkit-keyframes spinner-grow {
-  0% {
-    transform: scale(0);
-  }
-
-  50% {
-    opacity: 1;
-    transform: none;
-  }
 }
 
 @keyframes spinner-grow {
@@ -7127,7 +7049,6 @@ fieldset:disabled .btn {
   background-color: currentColor;
   border-radius: 50%;
   opacity: 0;
-  -webkit-animation: 0.75s linear infinite spinner-grow;
   animation: 0.75s linear infinite spinner-grow;
 }
 
@@ -7138,7 +7059,6 @@ fieldset:disabled .btn {
 
 @media (prefers-reduced-motion: reduce) {
   .spinner-border, .spinner-grow {
-    -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
   }
 }
@@ -7272,14 +7192,7 @@ fieldset:disabled .btn {
 }
 
 .placeholder-glow .placeholder {
-  -webkit-animation: placeholder-glow 2s ease-in-out infinite;
   animation: placeholder-glow 2s ease-in-out infinite;
-}
-
-@-webkit-keyframes placeholder-glow {
-  50% {
-    opacity: 0.2;
-  }
 }
 
 @keyframes placeholder-glow {
@@ -7289,24 +7202,13 @@ fieldset:disabled .btn {
 }
 
 .placeholder-wave {
-  -webkit-mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
   mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
-  -webkit-mask-size: 200% 100%;
   mask-size: 200% 100%;
-  -webkit-animation: placeholder-wave 2s linear infinite;
   animation: placeholder-wave 2s linear infinite;
-}
-
-@-webkit-keyframes placeholder-wave {
-  100% {
-    -webkit-mask-position: -200% 0%;
-    mask-position: -200% 0%;
-  }
 }
 
 @keyframes placeholder-wave {
   100% {
-    -webkit-mask-position: -200% 0%;
     mask-position: -200% 0%;
   }
 }
@@ -7433,7 +7335,6 @@ fieldset:disabled .btn {
 }
 
 .sticky-top {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1020;
@@ -7441,7 +7342,6 @@ fieldset:disabled .btn {
 
 @media (min-width: 576px) {
   .sticky-sm-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -7450,7 +7350,6 @@ fieldset:disabled .btn {
 
 @media (min-width: 768px) {
   .sticky-md-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -7459,7 +7358,6 @@ fieldset:disabled .btn {
 
 @media (min-width: 992px) {
   .sticky-lg-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -7468,7 +7366,6 @@ fieldset:disabled .btn {
 
 @media (min-width: 1200px) {
   .sticky-xl-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -7477,7 +7374,6 @@ fieldset:disabled .btn {
 
 @media (min-width: 1400px) {
   .sticky-xxl-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -7680,7 +7576,6 @@ fieldset:disabled .btn {
 }
 
 .position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important;
 }
 
@@ -8791,22 +8686,14 @@ fieldset:disabled .btn {
 }
 
 .user-select-all {
-  -webkit-user-select: all !important;
-  -moz-user-select: all !important;
   user-select: all !important;
 }
 
 .user-select-auto {
-  -webkit-user-select: auto !important;
-  -moz-user-select: auto !important;
-  -ms-user-select: auto !important;
   user-select: auto !important;
 }
 
 .user-select-none {
-  -webkit-user-select: none !important;
-  -moz-user-select: none !important;
-  -ms-user-select: none !important;
   user-select: none !important;
 }
 
@@ -12203,12 +12090,11 @@ fieldset:disabled .btn {
 
     .features-icons-item {
       height: 7rem;
+
       p {
-        font-size:16px;
+        font-size: 16px;
       }
-
     }
-
   }
 }
 
@@ -12234,6 +12120,7 @@ header.masthead {
   h1, .h1 {
     font-size: 2rem;
   }
+
   .masthead-message {
     filter: drop-shadow(3px 3px 0 red);
   }
@@ -12270,12 +12157,11 @@ header.masthead {
 
     .price-info {
       height: 7rem;
+
       p {
-        font-size:16px;
+        font-size: 16px;
       }
-
     }
-
   }
 }
 
@@ -12345,3 +12231,5 @@ footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
+/*# sourceMappingURL=style.css.map */
