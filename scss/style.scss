@@ -60,7 +60,7 @@ header {
     padding: 12rem 0;
     position: relative;
     background-color: #343a40;
-    background: url("/images/cover.jpg") no-repeat center center;
+    background: url("./images/cover.jpg") no-repeat center center;
     background-size: cover;
 
     @media (max-width: 768px) {
@@ -206,7 +206,7 @@ Gallery
     // width: calc(50% - 10px);
     .gallery__img {
       position: relative;
-      background: url("/images/1.png") no-repeat center center;
+      background: url("./images/1.png") no-repeat center center;
       background-size: cover;
     }
 
