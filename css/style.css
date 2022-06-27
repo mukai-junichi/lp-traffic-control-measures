@@ -206,7 +206,7 @@ Gallery
 
 .gallery__item .gallery__img {
   position: relative;
-  background: url("/images/1.png") no-repeat center center;
+  background: url("./images/1.png") no-repeat center center;
   background-size: cover;
 }
 
