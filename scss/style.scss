@@ -3,7 +3,7 @@ $bg-gray: #f8f9fa;
 $bg-footer: #444;
 
 %section-padding {
-  padding: 90px 20%;
+  padding: 90px 15%;
 
   @media (max-width: 1280px) {
     padding: 120px 10%;
@@ -138,7 +138,7 @@ header {
 ---------------------------------*/
 section {
   overflow: hidden;
-  transition: .8s;
+  transition: .5s;
   background-size: cover;
 
   .section {
@@ -203,6 +203,7 @@ Gallery
   &__item {
     display: flex;
     flex-wrap: wrap;
+
     // width: calc(50% - 10px);
     .gallery__img {
       position: relative;
@@ -357,6 +358,7 @@ Review
   &__list {
     display: flex;
     justify-content: center;
+
     @media (max-width: 768px) {
       flex-direction: column;
     }
@@ -415,53 +417,59 @@ Contact
 .contact {
   @extend %section-padding;
 
-  &__btn {
-    text-align: center;
-    display: inline-block;
-    background: #FF6B95;
-    padding: 15px 40px 15px 20px;
-    margin: 0px 0 0;
-    font-size: 18px;
-    font-weight: 900;
+  &__box {
+    display: flex;
+    justify-content: space-around;
 
-    transition: .5s;
-    border: 2px solid #fff;
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-      right: 20px;
-      width: 8px;
-      height: 8px;
-      top: calc(50% - 4px);
-      border-top: 2px solid #fff;
-      border-right: 2px solid #fff;
-      -webkit-transform: rotate(45deg);
-      transform: rotate(45deg);
-    }
-
-    &:hover {
-      border-color: #FF6B95;
-      background: #fff;
-      color: #FF6B95;
+    &__btn {
+      text-align: center;
+      display: inline-block;
+      background: #FF6B95;
+      padding: 15px 40px 15px 20px;
+      margin: 0px 0 0;
+      font-size: 18px;
+      font-weight: 900;
+      transition: .5s;
+      border: 2px solid #fff;
+      position: relative;
 
       &::after {
+        position: absolute;
+        content: "";
+        right: 20px;
+        width: 8px;
+        height: 8px;
+        top: calc(50% - 4px);
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      &:hover {
         border-color: #FF6B95;
+        background: #fff;
+        color: #FF6B95;
+
+        &::after {
+          border-color: #FF6B95;
+        }
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+          color: #FF6B95;
+        }
       }
     }
 
-    a {
-      color: #fff;
-      text-decoration: none;
-
-      @media (max-width: 768px) {
-        display: block;
-      }
-
-
+    @media (max-width: 768px) {
+      flex-direction: column;
+      height: 170px;
     }
-
   }
 }
 

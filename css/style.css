@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .about, .gallery, .point, .price, .review, .contact {
-  padding: 90px 20%;
+  padding: 90px 15%;
 }
 
 @media (max-width: 1280px) {
@@ -145,7 +145,7 @@ header .hero a:hover::after {
 ---------------------------------*/
 section {
   overflow: hidden;
-  transition: .8s;
+  transition: .5s;
   background-size: cover;
 }
 
@@ -413,7 +413,12 @@ Review
 /*--------------------------------
 Contact
 ---------------------------------*/
-.contact__btn {
+.contact__box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact__box__btn {
   text-align: center;
   display: inline-block;
   background: #FF6B95;
@@ -426,7 +431,7 @@ Contact
   position: relative;
 }
 
-.contact__btn::after {
+.contact__box__btn::after {
   position: absolute;
   content: "";
   right: 20px;
@@ -438,24 +443,29 @@ Contact
   transform: rotate(45deg);
 }
 
-.contact__btn:hover {
+.contact__box__btn:hover {
   border-color: #FF6B95;
   background: #fff;
   color: #FF6B95;
 }
 
-.contact__btn:hover::after {
+.contact__box__btn:hover::after {
   border-color: #FF6B95;
 }
 
-.contact__btn a {
+.contact__box__btn a {
   color: #fff;
   text-decoration: none;
 }
 
+.contact__box__btn a:hover {
+  color: #FF6B95;
+}
+
 @media (max-width: 768px) {
-  .contact__btn a {
-    display: block;
+  .contact__box {
+    flex-direction: column;
+    height: 170px;
   }
 }
 
