@@ -429,8 +429,6 @@ Contact
       margin: 0px 0 0;
       font-size: 18px;
       font-weight: 900;
-      transition: .5s;
-      border: 2px solid #fff;
       position: relative;
 
       &::after {
@@ -447,22 +445,14 @@ Contact
       }
 
       &:hover {
-        border-color: #FF6B95;
-        background: #fff;
-        color: #FF6B95;
+        box-shadow: 3px 3px 5px #ccc;
 
-        &::after {
-          border-color: #FF6B95;
-        }
       }
 
       a {
         color: #fff;
         text-decoration: none;
 
-        &:hover {
-          color: #FF6B95;
-        }
       }
     }
 

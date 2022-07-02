@@ -426,8 +426,6 @@ Contact
   margin: 0px 0 0;
   font-size: 18px;
   font-weight: 900;
-  transition: .5s;
-  border: 2px solid #fff;
   position: relative;
 }
 
@@ -444,22 +442,12 @@ Contact
 }
 
 .contact__box__btn:hover {
-  border-color: #FF6B95;
-  background: #fff;
-  color: #FF6B95;
-}
-
-.contact__box__btn:hover::after {
-  border-color: #FF6B95;
+  box-shadow: 3px 3px 5px #ccc;
 }
 
 .contact__box__btn a {
   color: #fff;
   text-decoration: none;
-}
-
-.contact__box__btn a:hover {
-  color: #FF6B95;
 }
 
 @media (max-width: 768px) {
